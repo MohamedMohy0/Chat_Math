@@ -1,4 +1,0 @@
-streamlit
-groq
-openai
-pylatex
