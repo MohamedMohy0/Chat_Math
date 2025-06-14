@@ -1,0 +1,40 @@
+Algebra: 2.5 H
+Model Accuracy: 70.00%
+Similarity Accuracy: 68.5598%
+__________________________________________________
+
+Probability: 2.5H
+Model Accuracy: 78.00%
+Similarity Accuracy: 70.9899%
+__________________________________________________
+
+Number_Theory: 3H
+Model Accuracy: 75.20%
+Similarity Accuracy: 70.8235%
+__________________________________________________
+
+Geometry: 3H
+Model Accuracy: 73.20%
+Similarity Accuracy: 71.1916%
+__________________________________________________
+
+Intermediate Algebra: 6H
+
+Model Accuracy: 55.60%
+Similarity Accuracy: 63.2542%
+__________________________________________________
+
+Prealgebra: 1H
+
+Model Accuracy: 79.60%
+Similarity Accuracy: 72.6620%
+__________________________________________________
+
+Precalculus: 2H
+
+Model Accuracy: 62.00%
+Similarity Accuracy: 66.1143%
+__________________________________________________
+
+Average Model Accuracy: 70.514 %
+Average Similarity Accuracy: 69.085 %
