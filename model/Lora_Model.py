@@ -14,7 +14,7 @@ def load_json(file_path):
 
 
 # Combine datasets
-full_data = load_json(r"D:\Gradution\Final project\preprocissing\train_data\algebra.json")
+full_data = load_json(r"PATH_FOR_CATOGERY")
 
 # Convert to Hugging Face dataset format
 dataset = Dataset.from_list(full_data)
@@ -44,7 +44,7 @@ model = get_peft_model(model, lora_config)
 
 # Training arguments with optimizations
 training_args = TrainingArguments(
-    output_dir="./algebra_model",
+    output_dir="./CATOGERY_model",
     evaluation_strategy="steps",
     save_steps=500,
     logging_steps=50,
@@ -78,5 +78,5 @@ trainer = Trainer(
 trainer.train()
 
 # Save Model
-trainer.save_model("algebra_model")
-tokenizer.save_pretrained("algebra_model")
+trainer.save_model("CATOGERY_model")
+tokenizer.save_pretrained("CATOGERY_model")

@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 import faiss
 import numpy as np
 
-data_path =r"D:\Gradution\Final project\preprocissing\train_data\precalculus.xlsx"
+data_path =r"PATH_OF_CATOGERY.xlsx"
 df = pd.read_excel(data_path)
 
 def preprocess_data(df):
@@ -25,7 +25,7 @@ d = embeddings.shape[1]
 index = faiss.IndexFlatL2(d)
 index.add(embeddings)
 
-faiss.write_index(index, "precalculus_model.bin")
+faiss.write_index(index, "CATOGERY_model.bin")
 
 model = OllamaLLM(model="llama3.2")
 

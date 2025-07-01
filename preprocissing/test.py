@@ -1,10 +1,10 @@
 from openai import OpenAI
-import time
 
+# Write here the api key
+api_key = ""
 
-api_key = "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"
-
-q=input("enter the question:")
+q=input("enter the question: ")
+a=input("Enter The Answer: ")
 client = OpenAI(api_key=api_key,base_url="https://api.groq.com/openai/v1")
 chat_completion1 = client.chat.completions.create(
 messages=[
@@ -16,6 +16,22 @@ messages=[
             model="llama-3.3-70b-versatile",
             stream=False,
         )
+
+chat_completion2 = client.chat.completions.create(
+        messages=[
+                {
+                    "role": "user",
+                    "content":f"write this answer in english correct way {a} and fix it i dont want it latex i want it in english only return the answer",
+                }
+            ],
+            model="llama-3.3-70b-versatile",
+            stream=False,
+        )
+answer=chat_completion2.choices[0].message.content
 question=chat_completion1.choices[0].message.content
 
+print("The question after preprocessing")
 print(question)
+print("____________________________________________________________")
+print("The answer after preprocessing")
+print(answer)

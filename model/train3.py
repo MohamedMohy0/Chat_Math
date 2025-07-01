@@ -11,12 +11,12 @@ def load_json(file_path):
     return [{"text": f"Solve: {item['question']} Answer: {item['answer']}"} for item in data]
 
 # Load datasets
-probability_data = load_json("probability.json")
-geometry_data = load_json("geometry.json")
-algebra_data = load_json("algebra.json")
+CATOGERY1_data = load_json("CATOGERY1.json")
+CATOGERY2_data = load_json("CATOGERY2.json")
+CATOGERY3_data = load_json("CATOGERY3.json")
 
 # Combine datasets
-full_data = probability_data + geometry_data + algebra_data
+full_data = CATOGERY1_data + CATOGERY2_data + CATOGERY3_data
 
 # Convert to Hugging Face dataset format
 dataset = Dataset.from_list(full_data)

@@ -7,7 +7,7 @@ import os
 import json
 
 # Path to the directory where JSON files are located
-folder_path = "prealgebra/"
+folder_path = "CATOGERY/"
 
 # List to store all the JSON data
 json_data = []
@@ -58,7 +58,8 @@ for i in range (0,250):
         print(i)
         break
 
-with open('prealgebra_test.json', 'a') as json_file:
+# replace CATOGERY with the catogory you work on it
+with open('CATOGERY.json', 'a') as json_file:
     json.dump(data, json_file, indent=4)
 
-print("Data saved to 'prealgebra_test.json'")
+print("Data saved to 'CATOGERY.json'")

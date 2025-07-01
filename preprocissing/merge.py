@@ -2,7 +2,7 @@ import os
 import pandas as pd
 
 # Folder containing Excel files
-folder_path = r"D:\Gradution\Final project\preprocissing\test_data"  # Change this to your folder path
+folder_path = r"PATH"  # Change this to your folder path
 output_file = "Test_data.xlsx"  # Name of the output file
 
 # Get a list of all Excel files in the folder

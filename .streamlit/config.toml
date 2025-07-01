@@ -1,0 +1,9 @@
+[client]
+showErrorDetails = "none"
+
+[theme]
+primaryColor = "#4e8f69"           # لون رئيسي، ممكن تتركه أو تغيّره حسب رغبتك
+backgroundColor = "#FFFFFF"        # خلفية بيضاء فاتحة
+secondaryBackgroundColor = "#F0F0F0" # خلفية ثانوية فاتحة جدا
+textColor = "#000000"              # نص أسود لسهولة القراءة
+font = "serif"

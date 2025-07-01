@@ -7,7 +7,7 @@ import faiss
 import numpy as np
 
 # Load test data
-test_data_path = r"D:\Gradution\Final project\preprocissing\test_data\intermediate_algebra_test.xlsx" # Change this to your test file
+test_data_path = r"PATH_OF_CATOGERY_test.xlsx" # Change this to your test file
 df_test = pd.read_excel(test_data_path)
 
 def preprocess_test_data(df):

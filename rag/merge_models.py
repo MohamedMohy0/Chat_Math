@@ -1,8 +1,8 @@
 import faiss
 
-index_file_1 = "Math5_model.bin"
-index_file_2 = "precalculus_model.bin"
-merged_index_file = "Math_Model.bin"
+index_file_1 = "Math_old_model.bin"
+index_file_2 = "CATOGERY_model.bin"
+merged_index_file = "Math_new_Model.bin"
 
 index1 = faiss.read_index(index_file_1)
 index2 = faiss.read_index(index_file_2)

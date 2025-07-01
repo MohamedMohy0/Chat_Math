@@ -58,15 +58,18 @@ if sumbit:
 
 
             full=full_latex(user_question,response)
-            
-            convert_latex_to_pdf(full, "output.pdf")
-            pdf_file="Out_put.pdf"
-            with open(pdf_file, "rb") as file:
-                pdf_data = file.read()
-            down=st.download_button("Download The Solve ",file_name=pdf_file,data=pdf_data)
+            try:
+                convert_latex_to_pdf(full, "output.pdf")
+                pdf_file="Out_put.pdf"
+                with open(pdf_file, "rb") as file:
+                    pdf_data = file.read()
+                down=st.download_button("Download The Result ",file_name=pdf_file,data=pdf_data)
+            except:
+                st.error("There is an error when convert the answer to latex please try again")
         elif user_question=="":
             st.warning("Please type a question before submitting.")
         elif kind.lower()=="no":
-            st.warning("This model not trained for this kind of questions.")
+            st.warning("This site provides you with answers to questions related to mathematics and its derivatives only.\nPlease try again with a mathematic question.")
+            
 
 

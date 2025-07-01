@@ -30,7 +30,7 @@ print("\n🔍 LoRA Model Summary:")
 model.print_trainable_parameters()
 
 # ✅ Load dataset
-df = pd.read_excel("algebra.xlsx")
+df = pd.read_excel("CATOGERY.xlsx")
 
 # ✅ Convert DataFrame to Hugging Face Dataset
 dataset = Dataset.from_pandas(df)
@@ -49,7 +49,7 @@ tokenized_datasets = dataset.map(preprocess_function, batched=True, remove_colum
 
 # ✅ Define training arguments
 training_args = TrainingArguments(
-    output_dir="./t5-lora-probability-model",
+    output_dir="./t5-lora-CATOGERY-model",
     per_device_train_batch_size=8,
     learning_rate=3e-4,
     num_train_epochs=3,
@@ -76,11 +76,11 @@ model.print_trainable_parameters()
 
 # ✅ Save fine-tuned LoRA model
 print("\n✅ Saving Fine-Tuned LoRA Model...")
-model.save_pretrained("./t5-lora-probability-model", safe_serialization=False)
-tokenizer.save_pretrained("./t5-lora-probability-model")
+model.save_pretrained("./t5-lora-CATOGERY-model", safe_serialization=False)
+tokenizer.save_pretrained("./t5-lora-CATOGERY-model")
 
 # ✅ Verify model save success
-if os.path.exists("./t5-lora-probability-model/adapter_model.bin"):
+if os.path.exists("./t5-lora-CATOGERY-model/adapter_model.bin"):
     print("✅ LoRA Model Saved Successfully.")
 else:
     print("❌ ERROR: adapter_model.bin not saved! Check training and paths.")

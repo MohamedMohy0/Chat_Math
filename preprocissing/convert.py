@@ -2,7 +2,8 @@ import pandas as pd
 import json
 
 # Load JSON file
-with open(r"D:\Gradution\Final project\preprocissing\train_data\intermediate_algebra.json", "r", encoding="utf-8") as file:
+#replace the LOCATION for the json files path 
+with open(r"LOCATION", "r", encoding="utf-8") as file:
     data = json.load(file)
 
 # Convert to DataFrame

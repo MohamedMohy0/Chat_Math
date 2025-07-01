@@ -10,7 +10,7 @@ def load_json(file_path):
     return [{"text": f"Q: {item['question']} A: {item['answer']}"} for item in data]
 
 # Load datasets
-probability_data = load_json("probability_test.json")
+probability_data = load_json("CATOGERY_test.json")
 
 
 # Combine datasets
